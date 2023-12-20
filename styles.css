@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Josefin+Sans:wght@200&family=Montserrat:wght@300&family=Preahvihear&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.check_icon,
+label{
+    display: none;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 2px solid #91b2ac;
+}
+.genWrapper{
+    max-width: 1200px;
+    margin: auto;
+}
+.navContainer{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.navContainer>h1{
+    color: #094c3b;
+    font-size: 1.7rem;
+
+}
+.navRight{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navItems{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navItems>a{
+    text-decoration: none;
+    color: #949695;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.btn__btn{
+    display:flex;
+}
+.btn__btn>button{
+    padding-block: 1rem;
+    text-transform: capitalize;
+    border: none;
+}
+.btn__btn>button:first-child{
+    background-color: white;
+    color: #246455;
+    padding-inline: 2rem;
+}
+.btn-btn{
+    border: none;
+    background-color: #094c3b;
+    color: #fff;
+    padding-inline: 1rem;
+    padding: 1rem;
+}
+.hero{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.heroContent{
+    flex: 1;
+}
+.heroContent>h1{
+    margin-top: 6rem;
+    font-size: 3rem;
+    line-height: 3.7rem;
+    width: 100px;
+    color: #094c3b;
+    text-transform: capitalize;
+}
+.btn_button{
+    padding-block: 0.4rem;
+    border-radius: 3px;
+}
+.heroImage{
+    width: 35%;
+    position: relative;
+}
+.heroImage>img:first-child{
+    width: 75%;
+    height: 60vh;
+    object-fit: cover;
+}
+.heroImage>img:last-child{
+    position: absolute;
+    width: 70%;
+    object-fit: cover;
+    bottom: -30%;
+    z-index: 1;
+    right: -3rem;
+}
+/* responsive code for nav and hero section */
+@media(min-width:320px) and (max-width: 460px){
+    .navContainer{
+        justify-content: space-between;
+    }
+    .navContainer>h1{
+        margin-left: 2rem;
+    }
+
+    .navItems{
+        display: flex;
+        flex-direction: column;
+    }
+    .navItems>a{
+        color: #094c3b;
+        font-size: 18px;
+        padding-block: .6rem;
+        text-align: center;
+        border-bottom: 4px solid #fff;
+    }
+    label{
+        font-weight: 900;
+        display: block;
+        margin-right: 2rem;
+        color: #094c3b;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .navRight{
+        display: none;
+        flex-direction: column;
+        height: 70vh;
+        padding: 20px;
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        width: 350px;
+        margin-top: 70px;
+        z-index: 1;
+        background-color: #91b2ac;
+        opacity: .9;
+        border-bottom: 4px solid #094c3b;
+    }
+    .btn__btn{
+        width: 262px;
+        margin: 1rem auto;
+    }
+    #toggle:checked + .navRight {
+        display: block;
+    }
+    .hero{
+        flex-direction: column;
+    }
+    .heroImage{
+        width: 90%;
+    }
+    .heroImage>img:first-child{
+        width: 100%;
+    }
+    .heroImage>img:last-child{
+        bottom: -20%;
+    }
+    /* nj */
+
+}
+    .secOne{
+        border: 2px solid;
+       
+    }
+    .sponsorsWrapper{
+        background-color: #82b9ae;
+        padding-block: 2rem;
+        text-align: center;
+        justify-content: center;
+        /* / padding-top: 3rem; */
+        padding-bottom: 6rem;
+    }
+    .sponsors{
+        display: grid;
+        gap: 27px;
+        grid-template-columns: repeat(4,1fr);
+        justify-content: space-between;
+       
+    }
+    .sponsors>p{
+        font-size: 10px;
+        text-align: center;
+        opacity: 0.2;
+        font-weight: 600;
+    }
+    /* \styling for services */
+    .serviceWrapper{
+        background-color: #165a4a;
+        padding-block: 3rem;
+        color: #fff;
+    }
+    .serviceContent{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-block: 2rem;
+    }
+
+    .serviceContent>h1{
+        font-weight: 500;
+        font-size: 1.8rem;
+        width: 350px;
+        line-height: 2.3rem;
+    }
+
+    .leftServiceContent>p{
+     font-size: 14px;
+     width: 420px;
+    }
+
+    .servicelink>a{
+     color: #fff;
+     font-size: 12px;
+    }
+
+    .servicesCardWrapper{
+        display: flex;
+        gap: 30px;
+        margin-block: 2rem;
+    }
+    .serviceCard{
+        width: 400px;
+    }
+    .imgCont{
+        position: relative;
+        width: 100%;
+        height: 200px;
+    }
+    .imgCont>img{
+        width: 100%;
+        height: 100%;
+    }
+    .imgCont>span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-left: 7px;
+    }
+    .serviceCard>h3{
+        font-size: small;
+        text-transform: capitalize;
+        margin-block: 1rem;
+    }
+    .serviceCard>p{
+        font-size: 18px;
+        opacity: 0.7;
+        width: 300px;
+    }
+    /* responsive code for sponsors and services */
+    @media (min-width:320px) and (max-width: 460px) {
+        .sponsors{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .serviceContent{
+            flex-direction: column;
+            gap: 40px;
+        }
+        .serviceContent>h1{
+            text-align: center;
+        }
+        .leftServiceContent>p{
+            text-align: center;
+            width: 370px;
+        }
+        .servicelink{
+            margin: 0.4rem auto;
+            width: 120px;
+        }
+        .servicelink>a{
+            text-align: center;
+        }
+        .serviceScroll{
+           overflow-x: scroll;
+
+        }
+        .innerTestimonial{
+            margin-block: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
+        .innerTestimonial>img{
+            width: 34%;
+            height: fit-content;
+            margin-top: -4rem;
+        }
+       /* testimonialContent */
+    }
+.innerTestimonial{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+    .testimonialIcons>i{
+        color: #094c3b;
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+    
+
+    .testimonialContent>h2{
+        font-weight: 200;
+        width: 500px;
+        line-height: 2rem;
+        opacity: .6;
+        margin-bottom: .3rem;
+    }
+    .testimonialContent>span{
+        opacity: .4;
+    }
+    .arrow{
+        display: flex;
+        gap: 20px;
+        margin-top: 1rem;
+    }
+    .arrow>i{
+        font-size: 1.8rem;
+    }
+    .arrow>i:first-child{
+        opacity: .4;
+    }
+    .arrow>i:last-child{
+        color: #094c3b;
+    }
+    .testimonialButton{
+        width: 180px;
+        margin-left: 650px;
+    }
+    .testimonialButton>button{
+        background-color: transparent;
+        padding-inline: .8rem;
+        border-radius: 3px;
+        color: #094c3b;
+        padding-block: .4rem;
+        border: 2px solid #094c3b;
+    }
+    .secTwo{
+       
+        /* border: 2px solid red; */
+        height: 100vh;
+        background-image: url(./images/dinningset.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .middleText{
+        align-items: center;
+        box-sizing: border-box;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+        height: 30rem;
+        font-size: 16px;
+    }
+    .bgContent{
+        /* border: 2px solid; */
+        width: 500px;
+        margin: 7rem auto;
+        text-align: center;
+     
+    }
+    .bgContent>h1{
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        margin-top: 0px;
+       
+    }
+    .secThree{
+        border: 2px black;
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .ourOptions{
+        font-size: 3rem;
+        margin: auto;
+        width: 350px;
+        padding-bottom: 10rem;
+        padding-top: 3rem;
+    }
+    /* .secThree>h3{
+        box-sizing: border-box;
+        font-size: 3.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        margin-top: 0px;
+        color: rgb(33, 37,41); 
+    } */
+    .houseHolder{
+        display: flex;
+      flex-wrap: wrap;
+        
+    }
+    .rightCard{
+       margin-top: -3rem;
+
+    }
+    /* .leftCard{
+
+    }
+    .cardImage{
+
+    } */
+    .cardBody{
+        color: #eaf1f0;
+    }
+    /* .secFour{
+
+    } */
+    
+   
+
+    
+
+      
+    
+
